@@ -1,3 +1,28 @@
+> > > > > A FAZER < < < < <
+
+# 1. Listagem
+
+ok - Formatar botão [adicionar_novo]
+ok - Adicionar coluna de ações com [alterar] e [excluir]
+
+# 2. Formulário
+
+ok - Adicionar botão [cancelar]
+ok - Adicionar botão [salvar/cadastrar] <!-- cadastrar se for novo e alterar se já houver cadastro -->
+
+# 3. Criar base em JSON
+
+-   listagem consumir dados do JSON
+-   Formulário consumir dados do JSON
+
+# 4. Adotar solução de banco de dados em substituição ao JSON
+
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
+
+---
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -28,8 +53,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
