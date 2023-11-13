@@ -2,20 +2,30 @@
 
 # 1. Listagem
 
-ok - Formatar botão [adicionar_novo]
-ok - Adicionar coluna de ações com [alterar] e [excluir]
+ok - Criar botão [Novo]
+ok - Adicionar coluna de ações com botões [Editar] e [Excluir]
 
 # 2. Formulário
 
-ok - Adicionar botão [cancelar]
-ok - Adicionar botão [salvar/cadastrar] <!-- cadastrar se for novo e alterar se já houver cadastro -->
+ok - Criar botão [cancelar]
+ok - Criar botão [Salvar]
 
 # 3. Criar base em JSON
 
--   listagem consumir dados do JSON
+ok - listagem consumir dados do JSON
+
 -   Formulário consumir dados do JSON
 
-# 4. Adotar solução de banco de dados em substituição ao JSON
+# 4. Adicionar comportamentos
+
+ok - Criar mecanismo de alternar componentes para navegação ([visivel, setVisivel])
+
+-   Adicionar comportamento ao botão [Editar];
+-   Adicionar comportamento ao botão [Excluir];
+-   Adicionar comportamento ao botão [Salvar];
+-   Adicionar comportamento ao botão [Cancelar];
+
+# 5. Adotar solução de banco de dados em substituição ao JSON
 
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
 

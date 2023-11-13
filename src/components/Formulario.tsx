@@ -1,45 +1,61 @@
-import { useState } from 'react'
 import Botao from './Botao'
+import Entrada from './Entrada'
 
-export default function Formulario() {
-    const [id, setId] = useState(1)
-    const [nome, setNome] = useState('Deniel')
-    const [idade, setIdade] = useState(41)
-    const [profissao, setProfissao] = useState('programador')
+interface FormularioProps {}
 
+export default function Formulario(props: FormularioProps) {
     return (
-        <div className='flex flex-col'>
-            <div className='flex flex-col mb-6 '>
-                <label className='mb-1'>Nome</label>
-                <input
-                    type='text'
-                    value={nome}
-                    className='text-black'
-                />
-            </div>
-
-            <div className='flex flex-col mb-6'>
-                <label className='mb-1'>Idade</label>
-                <input
-                    type='number'
-                    value={idade}
-                    className='text-black'
-                />
-            </div>
-
-            <div className='flex flex-col mb-6'>
-                <label className='mb-1'>Profissão</label>
-                <input
-                    type='text'
-                    value={profissao}
-                    className='text-black'
-                />
-            </div>
-
+        <div>
             <div>
                 <Botao>Cancelar</Botao>
-                <Botao cor='green'>Salvar || Cadastrar</Botao>
+                <Botao cor='green'>Salvar</Botao>
             </div>
+            <Entrada
+                legenda={'Nome'}
+                valor={undefined}
+            />
+            <Entrada
+                legenda={'Idade'}
+                valor={undefined}
+            />
         </div>
     )
 }
+
+// return (
+//     <div
+//         id={id}
+//         className='flex flex-col'>
+//         <div className='flex flex-col mb-6 '>
+//             <label className='mb-1'>Nome</label>
+//             <input
+//                 type='text'
+//                 value={nome}
+//                 className='text-black'
+//             />
+//         </div>
+
+//         <div className='flex flex-col mb-6'>
+//             <label className='mb-1'>Idade</label>
+//             <input
+//                 type='number'
+//                 value={idade}
+//                 className='text-black'
+//             />
+//         </div>
+
+//         <div className='flex flex-col mb-6'>
+//             <label className='mb-1'>Profissão</label>
+//             <input
+//                 type='text'
+//                 value={profissao}
+//                 className='text-black'
+//             />
+//         </div>
+
+//         <div>
+//             <Botao>Cancelar</Botao>
+//             <Botao cor='green'>Salvar</Botao>
+//         </div>
+//     </div>
+// )
