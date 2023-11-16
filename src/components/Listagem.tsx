@@ -1,7 +1,11 @@
 import Pessoa from '@/core/Pessoa'
 import Botao from './Botao'
 import { IconeEdicao, IconeLixo } from './Icones'
-import { dados as pessoas } from '@/backend/dados'
+import { dados } from '@/backend/dados'
+// import UsePessoas from '@/hooks/UsePessoas'
+import editarPessoa from '@/hooks/UsePessoas'
+
+// const { pessoaEscolhida, setPessoaEscolhida, criarPessoa, editarPessoa, excluirPessoa, exibirFormulario } = usePessoas()
 
 function renderizarCabecalho() {
     return (
@@ -16,7 +20,9 @@ function renderizarCabecalho() {
 }
 
 function renderizarLinhas() {
-    return pessoas.map((pessoa) => {
+    // const { editarPessoa } = UsePessoas()
+
+    return dados.map((pessoa) => {
         return (
             <tr
                 key={pessoa.id}
@@ -25,28 +31,47 @@ function renderizarLinhas() {
                 <td className='text-center p-4'>{pessoa.nome}</td>
                 <td className='text-center p-4'>{pessoa.idade}</td>
                 <td className='text-center p-4'>{pessoa.profissao}</td>
-                {renderizarAcoes()}
+                <td className='flex justify-center p-4'>
+                    <Botao
+                        cor='gray'
+                        className='  text-green-400 flex justify-center items-center rounded-full p-2 m-1 hover:bg-purple-50'
+                        onClick={() => editarPessoa(pessoa)}>
+                        {/* onClick={() => editarPessoa(pessoa)}> */}
+                        {/* onClick={() => console.log(pessoa)}> */}
+                        {IconeEdicao}
+                    </Botao>
+
+                    <Botao
+                        cor='gray'
+                        className=' text-red-400 flex justify-center items-center rounded-full p-2 m-1 hover:bg-purple-50'
+                        onClick={() => console.log('excluir essa pessoa')}>
+                        {IconeLixo}
+                    </Botao>
+                </td>
             </tr>
         )
     })
 }
 
-function renderizarAcoes() {
-    return (
-        <td className='text-center p-4'>
-            <Botao
-                cor='blue'
-                className='flex justify-center items-center text-green-400 rounded-full p-2 m-1 hover:bg-purple-50'>
-                {IconeEdicao}
-            </Botao>
-            <Botao
-                cor='blue'
-                className='flex justify-center items-center text-red-400 rounded-full p-2 m-1 hover:bg-purple-50'>
-                {IconeLixo}
-            </Botao>
-        </td>
-    )
-}
+// function renderizarAcoes() {
+//     return (
+//         <td className='flex justify-center p-4'>
+//             <Botao
+//                 cor='gray'
+//                 className='  text-green-400 flex justify-center items-center rounded-full p-2 m-1 hover:bg-purple-50'
+//                 onClick={() => editarPessoa(pessoa.id)}>
+//                 {/* onClick={() => console.log('editar essa pessoa')}> */}
+//                 {IconeEdicao}
+//             </Botao>
+//             <Botao
+//                 cor='gray'
+//                 className=' text-red-400 flex justify-center items-center rounded-full p-2 m-1 hover:bg-purple-50'
+//                 onClick={() => console.log('excluir essa pessoa')}>
+//                 {IconeLixo}
+//             </Botao>
+//         </td>
+//     )
+// }
 
 export default function Listagem() {
     return (
@@ -55,13 +80,6 @@ export default function Listagem() {
                 <thead>{renderizarCabecalho()}</thead>
                 <tbody>{renderizarLinhas()}</tbody>
             </table>
-            <div className='flex justify-end mt-7'>
-                <Botao
-                    cor='green'
-                    className=' flex mr-2'>
-                    Novo
-                </Botao>
-            </div>
         </>
     )
 }

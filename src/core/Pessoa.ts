@@ -1,10 +1,10 @@
 export default class Pessoa {
-    #id: number
+    #id: any
     #nome: string
     #idade: number
     #profissao: string
 
-    constructor(id: number, nome: string, idade: number, profissao: string) {
+    constructor(id: any, nome: string, idade: number, profissao: string) {
         this.#id = id
         this.#nome = nome
         this.#idade = idade
